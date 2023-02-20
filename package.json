@@ -1,6 +1,7 @@
 {
   "name": "babylon-react-bootstrap.js",
   "version": "0.1.0",
+  "homepage": "https://microsoft.github.io/BabylonJS-React-Template",
   "private": true,
   "dependencies": {
     "@azure/msal-browser": "^2.32.2",
@@ -65,6 +66,8 @@
     "workbox-webpack-plugin": "^6.4.1"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js"
