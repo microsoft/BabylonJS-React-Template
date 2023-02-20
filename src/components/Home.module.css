@@ -1,0 +1,109 @@
+:root {
+    --textGrey: #4F4F4F;
+    --textLightGrey: #F2F2F2;
+    --btnBlue: #2F80ED;
+    --contentWidth: 1000px
+}
+
+/**
+ * Home - fonts, colours, background
+ */
+#home {
+    background: #F8F9FA;
+    color: var(--textGrey);
+}
+
+#home h1,
+#home h2,
+#home p {
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+#home h1 {
+    font-weight: 320;
+    font-size: 28px;
+}
+
+#home h2 {
+    font-size: 20px;
+}
+
+#home p {
+    font-size: 14px;
+}
+
+/**
+ * Header - top bar
+ */
+#header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: var(--contentWidth);
+    padding: 30px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+#header #logo {
+    cursor: pointer;
+}
+
+#header nav ul {
+    list-style-type: none;
+}
+
+#header nav ul li {
+    display: inline;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#header nav ul li:hover,
+#header nav ul li.active {
+    text-decoration: underline var(--btnBlue);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 7px;
+}
+
+/**
+ * Home Content
+ */
+#homeContent {
+    width: var(--contentWidth);
+    margin: 0 auto;
+}
+
+article {
+    margin-bottom: 200px;
+}
+
+article.welcome {
+    margin-top: 400px;
+    display: flex;
+    justify-content: space-between;
+}
+
+section.welcomeSection {
+    width: 430px
+}
+
+section.sectionExample {
+    margin-bottom: 50px;
+}
+
+.button {
+    cursor: pointer;
+    border: none;
+    padding: 12px;
+    background-color: var(--btnBlue);
+    color: var(--textLightGrey);
+}
+
+a.exampleLink {
+    color: var(--btnBlue);
+    text-decoration: none;
+}

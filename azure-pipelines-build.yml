@@ -1,0 +1,38 @@
+# Node.js with React
+# Build a Node.js project that uses React.
+# Add steps that analyze code, save build artifacts, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
+
+trigger:
+  branches:
+   include:
+    - master
+  paths:
+   include:
+    - Apps/*
+
+pool:
+  vmImage: ubuntu-latest
+
+variables:
+- name: AppDirectory
+  value: $(Build.SourcesDirectory)/Apps/babylon-react-bootstrap.js
+
+steps:
+- task: NodeTool@0
+  inputs:
+    versionSpec: '14.x'
+  displayName: 'Install Node.js'
+
+- script: |
+    npm install
+    npm run build
+  displayName: 'npm install and build'
+  workingDirectory: '${{ variables.AppDirectory }}'
+
+- task: PublishBuildArtifacts@1
+  displayName: Publish build artefacts
+  inputs:
+    PathtoPublish: '${{ variables.AppDirectory }}/build'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
