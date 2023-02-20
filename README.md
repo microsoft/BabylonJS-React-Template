@@ -10,6 +10,8 @@ It also serves as a reference for how a React/Babylon/Cesium/MSAL auth'd fronten
 
 This project was created with [`npx create-react-app`](https://reactjs.org/docs/create-a-new-react-app.html) and then [ejected](https://create-react-app.dev/docs/available-scripts/#npm-run-eject) 
 
+[How to configure Authentication](./AAD_AUTHENTICATION.md)
+
 # What's included:
 * Webpack project, with:
   * [MSAL](https://github.com/AzureAD/microsoft-authentication-library-for-js) for AAD authentication
