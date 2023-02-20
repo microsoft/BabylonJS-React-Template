@@ -8,6 +8,10 @@ This projects provides a convenient starting point for building 3D web apps with
 
 It also serves as a reference for how a React/Babylon/Cesium/MSAL auth'd frontend can be setup, as you may prefer to set up a project without using this package.
 
+This project was created with [`npx create-react-app`](https://reactjs.org/docs/create-a-new-react-app.html) and then [ejected](https://create-react-app.dev/docs/available-scripts/#npm-run-eject) 
+
+[How to configure Authentication](./AAD_AUTHENTICATION.md)
+
 # What's included:
 * Webpack project, with:
   * [MSAL](https://github.com/AzureAD/microsoft-authentication-library-for-js) for AAD authentication
@@ -31,8 +35,6 @@ Navigate to http://localhost:3000
 cd Apps/babylon-react-bootstrap.js
 npm run build
 ```
-
-[Apps/babylon-react-bootstrap.js](Apps/babylon-react-bootstrap.js) was created with [`npx create-react-app`](https://reactjs.org/docs/create-a-new-react-app.html)
 
 
 ## Contributing
