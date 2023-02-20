@@ -1,0 +1,12 @@
+/*!
+   * URI.js - Mutating URLs
+   *
+   * Version: 1.19.11
+   *
+   * Author: Rodney Rehm
+   * Web: http://medialize.github.io/URI.js/
+   *
+   * Licensed under
+   *   MIT License http://www.opensource.org/licenses/mit-license
+   *
+   */
