@@ -1,14 +1,39 @@
-# Project
+# BabylonJS + React Project Template 
+A template project for creating 3D real-time web apps using BabylonJS and React.
 
-> This repo has been populated by an initial template to help get you started. Please
-> make sure to update the content to build a great experience for community-building.
+![Hero image for BabylonJS + React tempalte](docs/images/BabylonReactHero.png)
 
-As the maintainer of this project, please make a few updates:
+# Why Use This Project Template?
+This projects provides a convenient starting point for building 3D web apps with either BabylonJS or Cesium.
 
-- Improving this README.MD file to provide a great experience
-- Updating SUPPORT.MD with content about this project's support experience
-- Understanding the security reporting process in SECURITY.MD
-- Remove this section from the README
+It also serves as a reference for how a React/Babylon/Cesium/MSAL auth'd frontend can be setup, as you may prefer to set up a project without using this package.
+
+# What's included:
+* Webpack project, with:
+  * [MSAL](https://github.com/AzureAD/microsoft-authentication-library-for-js) for AAD authentication
+  * [Cesium](https://cesium.com/) dependencies for visualing geo-spatial data, with a sample scene to get started
+  * [Babylon](https://www.babylonjs.com/) dependencies for rendering 3D content, with a sample scene to get started
+  * [Redux Toolkit (RTK)](https://redux-toolkit.js.org/) for state management
+* Build scripts for local deployment
+* DevOps Build pipelines
+
+# Getting Started
+## Run locally
+```bash
+cd Apps/babylon-react-bootstrap.js
+npm start
+```
+
+Navigate to http://localhost:3000
+
+# Build
+```bash
+cd Apps/babylon-react-bootstrap.js
+npm run build
+```
+
+[Apps/babylon-react-bootstrap.js](Apps/babylon-react-bootstrap.js) was created with [`npx create-react-app`](https://reactjs.org/docs/create-a-new-react-app.html)
+
 
 ## Contributing
 
