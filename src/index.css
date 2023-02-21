@@ -14,4 +14,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
-#root {}
+:root {
+  --textGrey: #4F4F4F;
+  --textLightGrey: #F2F2F2;
+  --btnBlue: #2F80ED;
+  --ultraLightGrey: #F8F9FA;
+  --contentWidth: 1000px;
+}

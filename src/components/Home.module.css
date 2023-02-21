@@ -1,16 +1,15 @@
-:root {
-    --textGrey: #4F4F4F;
-    --textLightGrey: #F2F2F2;
-    --btnBlue: #2F80ED;
-    --contentWidth: 1000px
-}
-
 /**
  * Home - fonts, colours, background
  */
 #home {
-    background: #F8F9FA;
+    background-color: var(--ultraLightGrey);
     color: var(--textGrey);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 #home h1,
@@ -72,17 +71,11 @@
 /**
  * Home Content
  */
-#homeContent {
+
+main {
     width: var(--contentWidth);
-    margin: 0 auto;
 }
-
-article {
-    margin-bottom: 200px;
-}
-
 article.welcome {
-    margin-top: 400px;
     display: flex;
     justify-content: space-between;
 }
