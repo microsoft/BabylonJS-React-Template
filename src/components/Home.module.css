@@ -1,0 +1,164 @@
+/**
+ * Home - fonts, colours, background
+ */
+#home {
+    background-color: var(--ultraLightGrey);
+    color: var(--textGrey);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#home h1,
+#home h2,
+#home p {
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+#home h1 {
+    font-weight: 320;
+    font-size: 28px;
+}
+
+#home h2 {
+    font-size: 20px;
+}
+
+#home p {
+    font-size: 14px;
+}
+
+/**
+ * Header - top bar
+ */
+#header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    max-width: var(--contentWidth);
+    padding: 30px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+#header #logo {
+    cursor: pointer;
+}
+
+/**
+ * Nav styling
+ */
+#header nav ul {
+    list-style-type: none;
+}
+
+#header nav ul li:hover,
+#header nav ul li.active {
+    text-decoration: underline var(--btnBlue);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 7px;
+    cursor: pointer;
+}
+
+/**
+ * Row-specific nav
+ */
+#header nav#rowNav ul li {
+    display: inline;
+    padding: 10px;
+}
+
+/**
+ * Dropdown nav menu 
+ */
+#header button#navExpandButton {
+    display: none;      /* display: block; using the media query below */
+   
+    width: 60px;
+    height: 60px;
+    border: none;
+    cursor: pointer;
+    background-color: var(--lightGrey);
+    background-size: 40% 40%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#header div#clickCatcher {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+#header nav#dropdownNav {
+    position: absolute;
+    top: 100px;
+    right: 0;
+    background-color: var(--lightGrey);
+}
+
+#header nav#dropdownNav li {
+    display: block;
+    padding: 20px 100px 20px 20px;
+    border-bottom: 1px solid var(--mediumGrey);
+}
+
+@media screen and (max-width: 920px) {
+    #header nav#rowNav {
+        display: none;
+    }
+
+    #header button#navExpandButton,
+    #header nav#dropdownNav {
+        display: block;
+    }
+}
+
+/**
+ * Home Content
+ */
+
+main {
+    /* width: var(--contentWidth); */
+}
+
+article.welcome {
+    display: flex;
+    justify-content: space-between;
+    gap: 120px;
+}
+
+@media screen and (max-width: 920px) {
+    article.welcome {
+        flex-direction: column;
+    }
+}
+
+section.welcomeSection {
+    width: 430px
+}
+
+section.sectionExample {
+    margin-bottom: 50px;
+}
+
+.button {
+    cursor: pointer;
+    border: none;
+    padding: 12px;
+    background-color: var(--btnBlue);
+    color: var(--lightGrey);
+}
+
+a.exampleLink {
+    color: var(--btnBlue);
+    text-decoration: none;
+}

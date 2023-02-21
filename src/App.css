@@ -1,0 +1,20 @@
+.btn {
+    box-sizing: border-box;
+    appearance: none;
+    background-color: transparent;
+    border-radius: 0.6em;
+    border-color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-self: center;
+    line-height: 1;
+    padding: 1.2em 2.8em;
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+}
+
+.btn:hover,
+.btn:focus {
+    outline: 0;
+}
