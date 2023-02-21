@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/BabylonJS-React-Template/static/css/main.ac29b3d6.css",
-    "main.js": "/BabylonJS-React-Template/static/js/main.c13acaf4.js",
+    "main.css": "/BabylonJS-React-Template/static/css/main.f2e9f920.css",
+    "main.js": "/BabylonJS-React-Template/static/js/main.737bd6fe.js",
     "static/js/645.f7d2dd16.chunk.js": "/BabylonJS-React-Template/static/js/645.f7d2dd16.chunk.js",
     "static/js/800.dea7f2d3.chunk.js": "/BabylonJS-React-Template/static/js/800.dea7f2d3.chunk.js",
     "static/js/514.438a8ae9.chunk.js": "/BabylonJS-React-Template/static/js/514.438a8ae9.chunk.js",
@@ -378,19 +378,21 @@
     "Widgets/CesiumWidget/lighter.css": "/BabylonJS-React-Template/Widgets/CesiumWidget/lighter.css",
     "Widgets/PerformanceWatchdog/PerformanceWatchdog.css": "/BabylonJS-React-Template/Widgets/PerformanceWatchdog/PerformanceWatchdog.css",
     "Workers/transferTypedArrayTest.js": "/BabylonJS-React-Template/Workers/transferTypedArrayTest.js",
+    "static/media/e711.svg": "/BabylonJS-React-Template/static/media/e711.33f0185b65b7389d85609e266d4c4556.svg",
     "Workers/defaultValue-0a909f67.js": "/BabylonJS-React-Template/Workers/defaultValue-0a909f67.js",
+    "static/media/e700.svg": "/BabylonJS-React-Template/static/media/e700.9711632bbb3c7aa6459262787d103596.svg",
     "Workers/GeometryOffsetAttribute-04332ce7.js": "/BabylonJS-React-Template/Workers/GeometryOffsetAttribute-04332ce7.js",
     "Workers/ArcType-ce2e50ab.js": "/BabylonJS-React-Template/Workers/ArcType-ce2e50ab.js",
     "Widgets/FullscreenButton/FullscreenButton.css": "/BabylonJS-React-Template/Widgets/FullscreenButton/FullscreenButton.css",
     "Workers/package.js": "/BabylonJS-React-Template/Workers/package.js",
     "Widgets/VRButton/VRButton.css": "/BabylonJS-React-Template/Widgets/VRButton/VRButton.css",
     "ThirdParty/Workers/package.json": "/BabylonJS-React-Template/ThirdParty/Workers/package.json",
-    "main.ac29b3d6.css.map": "/BabylonJS-React-Template/static/css/main.ac29b3d6.css.map",
-    "main.c13acaf4.js.map": "/BabylonJS-React-Template/static/js/main.c13acaf4.js.map",
+    "main.f2e9f920.css.map": "/BabylonJS-React-Template/static/css/main.f2e9f920.css.map",
+    "main.737bd6fe.js.map": "/BabylonJS-React-Template/static/js/main.737bd6fe.js.map",
     "787.77677336.chunk.js.map": "/BabylonJS-React-Template/static/js/787.77677336.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ac29b3d6.css",
-    "static/js/main.c13acaf4.js"
+    "static/css/main.f2e9f920.css",
+    "static/js/main.737bd6fe.js"
   ]
 }
