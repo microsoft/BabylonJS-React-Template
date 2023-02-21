@@ -1,15 +1,18 @@
+import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+
 import { VIEW } from '../config/redux/constants/view';
 import { setView } from "../config/redux/slices/appSlice";
-
 import BabylonCanvas from "./BabylonCanvas";
 import CesiumCanvas from "./CesiumCanvas";
 import AuthExample from "./AuthExample";
 
 import illustration from "../assets/images/undraw_engineering_team_a7n2.svg";
 import msLogo from "../assets/images/HeaderLogo.svg";
+import expandMenuIcon from "../assets/images/e700.svg";
+import closeMenuIcon from "../assets/images/e711.svg";
+
 import styles from "./Home.module.css";
-import { useState } from "react";
 
 const docsUrls = "https://github.com/microsoft/BabylonJS-React-Template";
 
@@ -30,8 +33,9 @@ const Header = () => {
             <li>
                 <Button text="Read the docs" onClick={() => window.open(docsUrls)} />
             </li>
-        </ul>)
-        ;
+        </ul>
+    );
+
     return (
         <header id={styles.header}>
             <img id={styles.logo} onClick={() => dispatch(setView(VIEW.HOME))} alt="Microsoft Customer Innovation logo" src={msLogo} />
@@ -42,12 +46,19 @@ const Header = () => {
             </nav>
 
             {/* < 920px (tablet/phone) */}
-            <button id={styles.navExpandButton} onClick={() => setShowDropdownMenu(!showDropdownMenu)}>
-                nav
-            </button>
-            <nav id={styles.dropdownNav} className={showDropdownMenu && styles.show}>
-                {menuList}
-            </nav>
+            <button
+                id={styles.navExpandButton}
+                style={{ backgroundImage: `url(${showDropdownMenu ? closeMenuIcon : expandMenuIcon})` }}
+                onClick={() => setShowDropdownMenu(!showDropdownMenu)}
+            />
+            {showDropdownMenu &&
+                <>
+                    <div id={styles.clickCatcher} onClick={() => setShowDropdownMenu(false)} />
+                    <nav id={styles.dropdownNav}>
+                        {menuList}
+                    </nav>
+                </>
+            }
         </header>
     );
 }
