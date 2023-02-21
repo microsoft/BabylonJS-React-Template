@@ -122,18 +122,24 @@
     }
 }
 
-
 /**
  * Home Content
  */
 
 main {
-    width: var(--contentWidth);
+    /* width: var(--contentWidth); */
 }
 
 article.welcome {
     display: flex;
     justify-content: space-between;
+    gap: 120px;
+}
+
+@media screen and (max-width: 920px) {
+    article.welcome {
+        flex-direction: column;
+    }
 }
 
 section.welcomeSection {
