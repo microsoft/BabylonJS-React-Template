@@ -21,7 +21,10 @@ const AuthExample = () => {
         handleRedirect();
     }, []);
 
-    return (
+    if (aadAppId === "" || tenantId === "") {
+        return <p>Azure Active Directory and Tenant ID config not set - see <a href="https://github.com/microsoft/BabylonJS-React-Template/blob/main/AAD_AUTHENTICATION.md">AAD_AUTHENTICATION.md</a> for more info</p>
+    } else {
+    } return (
         <MsalProvider instance={msalInstance}>
             <AuthExampleContent />
         </MsalProvider>
