@@ -10,7 +10,7 @@ import illustration from "../assets/images/undraw_engineering_team_a7n2.svg";
 import msLogo from "../assets/images/HeaderLogo.svg";
 import styles from "./Home.module.css";
 
-const docsUrls = "https://wwhs.visualstudio.com/SharedIP/_git/ProjectTemplateBabylonReact";
+const docsUrls = "https://github.com/microsoft/BabylonJS-React-Template";
 
 const Button = ({ text, onClick }) => <button className={styles.button} onClick={onClick}>{text}</button>
 
