@@ -9,6 +9,7 @@ import AuthExample from "./AuthExample";
 import illustration from "../assets/images/undraw_engineering_team_a7n2.svg";
 import msLogo from "../assets/images/HeaderLogo.svg";
 import styles from "./Home.module.css";
+import { useState } from "react";
 
 const docsUrls = "https://github.com/microsoft/BabylonJS-React-Template";
 
@@ -17,22 +18,35 @@ const Button = ({ text, onClick }) => <button className={styles.button} onClick=
 const Header = () => {
     const dispatch = useDispatch();
     const currentView = useSelector(state => state.app.view);
+    const [showDropdownMenu, setShowDropdownMenu] = useState(false);
 
     const menuItemClassName = (view) => view === currentView ? styles.active : null;
-
+    const menuList = (
+        <ul>
+            <li onClick={() => dispatch(setView(VIEW.HOME))} className={menuItemClassName(VIEW.HOME)}>Home</li>
+            <li onClick={() => dispatch(setView(VIEW.CESIUM))} className={menuItemClassName(VIEW.CESIUM)}>Cesium Example</li>
+            <li onClick={() => dispatch(setView(VIEW.BABYLON))} className={menuItemClassName(VIEW.BABYLON)}>Babylon Example</li>
+            <li onClick={() => dispatch(setView(VIEW.AUTH))} className={menuItemClassName(VIEW.AUTH)}>Auth Example</li>
+            <li>
+                <Button text="Read the docs" onClick={() => window.open(docsUrls)} />
+            </li>
+        </ul>)
+        ;
     return (
         <header id={styles.header}>
             <img id={styles.logo} onClick={() => dispatch(setView(VIEW.HOME))} alt="Microsoft Customer Innovation logo" src={msLogo} />
-            <nav>
-                <ul>
-                    <li onClick={() => dispatch(setView(VIEW.HOME))} className={menuItemClassName(VIEW.HOME)}>Home</li>
-                    <li onClick={() => dispatch(setView(VIEW.CESIUM))} className={menuItemClassName(VIEW.CESIUM)}>Cesium Example</li>
-                    <li onClick={() => dispatch(setView(VIEW.BABYLON))} className={menuItemClassName(VIEW.BABYLON)}>Babylon Example</li>
-                    <li onClick={() => dispatch(setView(VIEW.AUTH))} className={menuItemClassName(VIEW.AUTH)}>Auth Example</li>
-                    <li>
-                        <Button text="Read the docs" onClick={() => window.open(docsUrls)} />
-                    </li>
-                </ul>
+
+            {/* Desktop nav menu - shown/hidden via CSS media query */}
+            <nav id={styles.rowNav}>
+                {menuList}
+            </nav>
+
+            {/* < 920px (tablet/phone) */}
+            <button id={styles.navExpandButton} onClick={() => setShowDropdownMenu(!showDropdownMenu)}>
+                nav
+            </button>
+            <nav id={styles.dropdownNav} className={showDropdownMenu && styles.show}>
+                {menuList}
             </nav>
         </header>
     );
