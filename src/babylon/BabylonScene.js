@@ -27,7 +27,10 @@ export class BabylonScene {
 
         // this.scene.debugLayer.show();
 
-        // run the main render loop
+        window.addEventListener("resize", () => {
+            engine.resize();
+        });
+
         engine.runRenderLoop(() => {
             this.scene.render();
         });
