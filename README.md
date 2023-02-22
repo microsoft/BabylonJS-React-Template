@@ -6,11 +6,11 @@ A template project for creating 3D real-time web apps using BabylonJS and React.
 DEMO > https://microsoft.github.io/BabylonJS-React-Template/
 
 # Why Use This Project Template?
-This projects provides a convenient starting point for building 3D web apps with either BabylonJS or Cesium.
+This project provides a convenient starting point for building 3D web apps with BabylonJS or Cesium.
 
-It also serves as a reference for how a React/Babylon/Cesium/MSAL auth'd frontend can be setup, as you may prefer to set up a project without using this package.
+It also serves as a reference for how to structure a React/Babylon/Cesium with MSAL authentication, for situations where you prefer setting up your own project.
 
-This project was created with [`npx create-react-app`](https://reactjs.org/docs/create-a-new-react-app.html) and then [ejected](https://create-react-app.dev/docs/available-scripts/#npm-run-eject) 
+The project was created with [`npx create-react-app`](https://reactjs.org/docs/create-a-new-react-app.html) and then [ejected](https://create-react-app.dev/docs/available-scripts/#npm-run-eject) 
 
 
 # What's included:
@@ -39,7 +39,8 @@ npm run build
 
 ## Guides
 [How to configure Authentication](./AAD_AUTHENTICATION.md)
-
+<!-- [How to build in Azure DevOps] -->
+<!-- [] -->
 
 ## Contributing
 
