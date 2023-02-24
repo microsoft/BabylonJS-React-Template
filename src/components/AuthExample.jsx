@@ -42,7 +42,7 @@ const AuthExampleContent = () => {
                 setProfilePhoto(photo);
             }
         })();
-    }, [accounts])
+    }, [instance, accounts])
 
     const renderProfileContent = () => {
         const isLoggedIn = instance.getActiveAccount();
