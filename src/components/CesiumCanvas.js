@@ -35,7 +35,7 @@ const CesiumCanvas = () => {
         });
 
         // Add Cesium OSM Buildings, a global 3D buildings layer.
-        const buildingTileset = cesiumViewer.current.scene.primitives.add(Cesium.createOsmBuildings());
+        cesiumViewer.current.scene.primitives.add(Cesium.createOsmBuildings());
 
         // Fly the camera to San Francisco at the given longitude, latitude, and height.
         cesiumViewer.current.camera.flyTo({
