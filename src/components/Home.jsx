@@ -13,6 +13,7 @@ import expandMenuIcon from "../assets/images/e700.svg";
 import closeMenuIcon from "../assets/images/e711.svg";
 
 import styles from "./Home.module.css";
+import { createPortal } from "react-dom";
 
 const docsUrls = "https://github.com/microsoft/BabylonJS-React-Template";
 
@@ -46,7 +47,6 @@ const Header = () => {
                     {menuList}
                 </nav>
 
-                {/* < 920px (tablet/phone) */}
                 <button
                     id={styles.navExpandButton}
                     style={{ backgroundImage: `url(${showDropdownMenu ? closeMenuIcon : expandMenuIcon})` }}
