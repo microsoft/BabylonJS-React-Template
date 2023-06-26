@@ -98,6 +98,7 @@
     top: 100px;
     right: 0;
     background-color: var(--lightGrey);
+    z-index: 1;
 }
 
 #header .headerContent nav#dropdownNav li {
