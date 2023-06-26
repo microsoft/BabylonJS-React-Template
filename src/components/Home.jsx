@@ -38,27 +38,29 @@ const Header = () => {
 
     return (
         <header id={styles.header}>
-            <img id={styles.logo} onClick={() => dispatch(setView(VIEW.HOME))} alt="Microsoft Customer Innovation logo" src={msLogo} />
+            <div className={styles.headerContent}>
+                <img id={styles.logo} onClick={() => dispatch(setView(VIEW.HOME))} alt="Microsoft Customer Innovation logo" src={msLogo} />
 
-            {/* Desktop nav menu - shown/hidden via CSS media query */}
-            <nav id={styles.rowNav}>
-                {menuList}
-            </nav>
+                {/* Desktop nav menu - shown/hidden via CSS media query */}
+                <nav id={styles.rowNav}>
+                    {menuList}
+                </nav>
 
-            {/* < 920px (tablet/phone) */}
-            <button
-                id={styles.navExpandButton}
-                style={{ backgroundImage: `url(${showDropdownMenu ? closeMenuIcon : expandMenuIcon})` }}
-                onClick={() => setShowDropdownMenu(!showDropdownMenu)}
-            />
-            {showDropdownMenu &&
-                <>
-                    <div id={styles.clickCatcher} onClick={() => setShowDropdownMenu(false)} />
-                    <nav id={styles.dropdownNav}>
-                        {menuList}
-                    </nav>
-                </>
-            }
+                {/* < 920px (tablet/phone) */}
+                <button
+                    id={styles.navExpandButton}
+                    style={{ backgroundImage: `url(${showDropdownMenu ? closeMenuIcon : expandMenuIcon})` }}
+                    onClick={() => setShowDropdownMenu(!showDropdownMenu)}
+                />
+                {showDropdownMenu &&
+                    <>
+                        <div id={styles.clickCatcher} onClick={() => setShowDropdownMenu(false)} />
+                        <nav id={styles.dropdownNav}>
+                            {menuList}
+                        </nav>
+                    </>
+                }
+            </div>
         </header>
     );
 }
@@ -100,8 +102,8 @@ const Home = () => {
     }
     return (
         <div id={styles.home}>
-            {renderView()}
             <Header />
+            {renderView()}
         </div>
     );
 }
