@@ -25,7 +25,7 @@ The project was created with [`npx create-react-app`](https://reactjs.org/docs/c
 # Getting Started
 ## Run locally
 ```bash
-cd Apps/babylon-react-bootstrap.js
+npm install      # required once 
 npm start
 ```
 
@@ -33,7 +33,6 @@ Navigate to http://localhost:3000
 
 ## Build
 ```bash
-cd Apps/babylon-react-bootstrap.js
 npm run build
 ```
 
