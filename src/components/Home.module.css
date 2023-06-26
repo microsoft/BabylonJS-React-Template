@@ -3,9 +3,6 @@
  */
 #home {
     color: var(--textGrey);
-    /* max-width: var(--contentWidth);
-    height: 100vh;
-    margin: 0 auto; */
 }
 
 #home h1,
@@ -32,30 +29,31 @@
  * Header - top bar
  */
 #header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
+    background-color: var(--ultraLightGrey);
+}
+
+#header .headerContent {
     max-width: var(--contentWidth);
     margin: auto;
     padding: 30px 0;
     display: flex;
     justify-content: space-between;
+
 }
 
-#header #logo {
+#header .headerContent #logo {
     cursor: pointer;
 }
 
 /**
  * Nav styling
  */
-#header nav ul {
+#header .headerContent nav ul {
     list-style-type: none;
 }
 
-#header nav ul li:hover,
-#header nav ul li.active {
+#header .headerContent nav ul li:hover,
+#header .headerContent nav ul li.active {
     text-decoration: underline var(--btnBlue);
     text-decoration-thickness: 2px;
     text-underline-offset: 7px;
@@ -65,7 +63,7 @@
 /**
  * Row-specific nav
  */
-#header nav#rowNav ul li {
+#header .headerContent nav#rowNav ul li {
     display: inline;
     padding: 10px;
 }
@@ -73,7 +71,7 @@
 /**
  * Dropdown nav menu
  */
-#header button#navExpandButton {
+#header .headerContent button#navExpandButton {
     display: none;
     /* display: block; using the media query below */
 
@@ -87,7 +85,7 @@
     background-position: center;
 }
 
-#header div#clickCatcher {
+#header .headerContent div#clickCatcher {
     position: absolute;
     top: 0;
     left: 0;
@@ -95,26 +93,26 @@
     height: 100vh;
 }
 
-#header nav#dropdownNav {
+#header .headerContent nav#dropdownNav {
     position: absolute;
     top: 100px;
     right: 0;
     background-color: var(--lightGrey);
 }
 
-#header nav#dropdownNav li {
+#header .headerContent nav#dropdownNav li {
     display: block;
     padding: 20px 100px 20px 20px;
     border-bottom: 1px solid var(--mediumGrey);
 }
 
 @media screen and (max-width: 920px) {
-    #header nav#rowNav {
+    #header .headerContent nav#rowNav {
         display: none;
     }
 
-    #header button#navExpandButton,
-    #header nav#dropdownNav {
+    #header .headerContent button#navExpandButton,
+    #header .headerContent nav#dropdownNav {
         display: block;
     }
 }
