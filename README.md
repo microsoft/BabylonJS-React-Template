@@ -1,64 +1,39 @@
 # BabylonJS + React Project Template 
+
 A template project for creating 3D real-time web apps using BabylonJS and React.
 
-![Hero image for BabylonJS + React tempalte](docs/images/BabylonReactHero.png)
+![Hero image for BabylonJS + React template](docs/images/BabylonReactHero.png)
 
-DEMO > https://microsoft.github.io/BabylonJS-React-Template/
+**DEMO** ➤ https://microsoft.github.io/BabylonJS-React-Template/
 
-# Why Use This Project Template?
+---
+
+## Why Use This Project Template?
+
 This project provides a convenient starting point for building 3D web apps with BabylonJS or Cesium.
 
-It also serves as a reference for how to structure a React/Babylon/Cesium with MSAL authentication, for situations where you prefer setting up your own project.
+It also serves as a reference for how to structure a React/Babylon/Cesium app with MSAL authentication, for situations where you prefer setting up your own project.
 
-The project was created with [`npx create-react-app`](https://reactjs.org/docs/create-a-new-react-app.html) and then [ejected](https://create-react-app.dev/docs/available-scripts/#npm-run-eject) 
+The project was created with [`npx create-react-app`](https://reactjs.org/docs/create-a-new-react-app.html) and then [ejected](https://create-react-app.dev/docs/available-scripts/#npm-run-eject).
 
+---
 
-# What's included:
+## What's Included
+
 * Webpack project, with:
   * [MSAL](https://github.com/AzureAD/microsoft-authentication-library-for-js) for AAD authentication
-  * [Cesium](https://cesium.com/) dependencies for visualing geo-spatial data, with a sample scene to get started
-  * [Babylon](https://www.babylonjs.com/) dependencies for rendering 3D content, with a sample scene to get started
+  * [Cesium](https://cesium.com/) dependencies for visualizing geo-spatial data, with a sample scene to get started
+  * [BabylonJS](https://www.babylonjs.com/) dependencies for rendering 3D content, with a sample scene to get started
   * [Redux Toolkit (RTK)](https://redux-toolkit.js.org/) for state management
 * Build scripts for local deployment
-* DevOps Build pipelines
+* DevOps build pipelines
 
-# Getting Started
-## Run locally
+---
+
+## Getting Started
+
+### Run Locally
+
 ```bash
 npm install      # required once 
 npm start
-```
-
-Navigate to http://localhost:3000
-
-## Build
-```bash
-npm run build
-```
-
-## Guides
-[How to configure Authentication](./AAD_AUTHENTICATION.md)
-<!-- [How to build in Azure DevOps] -->
-<!-- [] -->
-
-## Contributing
-
-This project welcomes contributions and suggestions.  Most contributions require you to agree to a
-Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
-the rights to use your contribution. For details, visit https://cla.opensource.microsoft.com.
-
-When you submit a pull request, a CLA bot will automatically determine whether you need to provide
-a CLA and decorate the PR appropriately (e.g., status check, comment). Simply follow the instructions
-provided by the bot. You will only need to do this once across all repos using our CLA.
-
-This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
-For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or
-contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
-
-## Trademarks
-
-This project may contain trademarks or logos for projects, products, or services. Authorized use of Microsoft 
-trademarks or logos is subject to and must follow 
-[Microsoft's Trademark & Brand Guidelines](https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks/usage/general).
-Use of Microsoft trademarks or logos in modified versions of this project must not cause confusion or imply Microsoft sponsorship.
-Any use of third-party trademarks or logos are subject to those third-party's policies.
