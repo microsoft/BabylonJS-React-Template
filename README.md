@@ -10,13 +10,13 @@ This project provides a convenient starting point for building 3D web apps with 
 
 It also serves as a reference for how to structure a React/Babylon/Cesium with MSAL authentication, for situations where you prefer setting up your own project.
 
-The project was created with [`npx create-react-app`](https://reactjs.org/docs/create-a-new-react-app.html) and then [ejected](https://create-react-app.dev/docs/available-scripts/#npm-run-eject) 
+The project is built on top of [Vite](https://vite.dev/) with TypeScript, React 19, Babylon.js 9 and Cesium.
 
 
 # What's included:
-* Webpack project, with:
+* Vite + TypeScript project, with:
   * [MSAL](https://github.com/AzureAD/microsoft-authentication-library-for-js) for AAD authentication
-  * [Cesium](https://cesium.com/) dependencies for visualing geo-spatial data, with a sample scene to get started
+  * [Cesium](https://cesium.com/) dependencies for visualising geo-spatial data, with a sample scene to get started
   * [Babylon](https://www.babylonjs.com/) dependencies for rendering 3D content, with a sample scene to get started
   * [Redux Toolkit (RTK)](https://redux-toolkit.js.org/) for state management
 * Build scripts for local deployment
@@ -25,15 +25,22 @@ The project was created with [`npx create-react-app`](https://reactjs.org/docs/c
 # Getting Started
 ## Run locally
 ```bash
-npm install      # required once 
-npm start
+npm install      # required once
+npm run dev      # or: npm start
 ```
 
 Navigate to http://localhost:3000
 
 ## Build
 ```bash
-npm run build
+npm run build    # tsc -b && vite build (output: dist/)
+npm run preview  # preview the production build locally
+```
+
+## Other scripts
+```bash
+npm run typecheck  # TypeScript only, no emit
+npm run lint       # ESLint
 ```
 
 ## Guides

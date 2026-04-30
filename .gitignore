@@ -10,6 +10,13 @@
 
 # production
 /build
+/dist
+*.tsbuildinfo
+
+# playwright
+/test-results
+/playwright-report
+/playwright/.cache
 
 # misc
 .DS_Store

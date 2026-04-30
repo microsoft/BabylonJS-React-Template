@@ -1,6 +1,6 @@
 {
-  "short_name": "BabylonJS and React",
-  "name": "BabylonJS and React project template",
+  "short_name": "Babylon React",
+  "name": "Babylon React Bootstrap",
   "icons": [
     {
       "src": "favicon.ico",
@@ -8,7 +8,7 @@
       "type": "image/x-icon"
     },
     {
-      "src": "logo256.png",
+      "src": "Logo256.png",
       "type": "image/png",
       "sizes": "256x256"
     },
