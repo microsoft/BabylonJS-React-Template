@@ -23,9 +23,13 @@ The project is built on top of [Vite](https://vite.dev/) with TypeScript, React 
 * DevOps Build pipelines
 
 # Getting Started
+## Prerequisites
+Use Node.js 22.13 or newer in the Node.js 22 LTS line, or Node.js 24 or newer,
+with npm. Node.js 20 is no longer supported by the current Cesium dependency.
+
 ## Run locally
 ```bash
-npm install      # required once
+npm ci           # install the versions recorded in package-lock.json
 npm run dev      # or: npm start
 ```
 
@@ -41,7 +45,25 @@ npm run preview  # preview the production build locally
 ```bash
 npm run typecheck  # TypeScript only, no emit
 npm run lint       # ESLint
+npm run audit      # all dependencies, including dev tools; fail on any known vulnerability
+npx playwright install chromium
+npm run test:e2e   # local browser smoke tests (requires WebGL)
 ```
+
+## Dependency maintenance
+Commit `package.json` and `package-lock.json` together when updating dependencies.
+Run `npm run audit`, `npm run typecheck`, `npm run lint`, `npm run build`, and
+`npm run test:e2e` after upgrades. The build pipeline uses `npm ci` and rejects
+known vulnerabilities at every severity, including development dependencies.
+
+TypeScript stays on the latest 6.0 patch because `typescript-eslint` currently
+supports TypeScript versions below 6.1, not TypeScript 7. The Node.js type
+definitions stay on the latest 22.x release to match the minimum supported
+runtime. Other direct dependencies target their latest stable releases as of
+September 24, 2026.
+
+A clean npm audit means no known advisories were reported by the registry at
+that time; it is not a guarantee that the application has no security defects.
 
 ## Guides
 [How to configure Authentication](./AAD_AUTHENTICATION.md)
