@@ -6,28 +6,29 @@
 trigger:
   branches:
    include:
-    - master
-  paths:
-   include:
-    - Apps/*
+    - main
 
 pool:
   vmImage: ubuntu-latest
 
 variables:
 - name: AppDirectory
-  value: $(Build.SourcesDirectory)/Apps/babylon-react-bootstrap.js
+  value: $(Build.SourcesDirectory)
 
 steps:
 - task: NodeTool@0
   inputs:
-    versionSpec: '20.x'
+    versionSpec: '22.x'
   displayName: 'Install Node.js'
 
 - script: |
-    npm install
+    set -e
+    npm ci --include=dev
+    npm run audit
+    npm run typecheck
+    npm run lint
     npm run build
-  displayName: 'npm install and build'
+  displayName: 'Install, audit, check and build'
   workingDirectory: '${{ variables.AppDirectory }}'
 
 - task: PublishBuildArtifacts@1
