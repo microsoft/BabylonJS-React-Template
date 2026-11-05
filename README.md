@@ -59,8 +59,13 @@ known vulnerabilities at every severity, including development dependencies.
 TypeScript stays on the latest 6.0 patch because `typescript-eslint` currently
 supports TypeScript versions below 6.1, not TypeScript 7. The Node.js type
 definitions stay on the latest 22.x release to match the minimum supported
-runtime. Other direct dependencies target their latest stable releases as of
-September 24, 2026.
+runtime. Other direct dependencies target their latest stable releases that were
+at least seven days old as of November 5, 2026.
+
+`package.json` overrides the transitive `minimatch` dependency of ESLint and
+`typescript-eslint` to 11.0.3 to fix GHSA-g3hv-75wg-m249, because no compatible
+release of either tool depends on a patched version yet. Remove the override
+once both tools depend on `minimatch` 11.0.1 or later.
 
 A clean npm audit means no known advisories were reported by the registry at
 that time; it is not a guarantee that the application has no security defects.
